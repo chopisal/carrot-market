@@ -2,8 +2,10 @@ import Layout from "@components/layout";
 import type { NextPage } from "next";
 import FloatingButton from "../components/floating-button";
 import Item from "../components/item";
+import useUser from "@libs/client/useUser";
 
 const Home: NextPage = () => {
+  const { user, isLoading } = useUser();
   return (
     <Layout hasTabBar title="홈">
       <div className="flex  flex-col space-y-5 divide-y">
