@@ -24,3 +24,6 @@ Next.js, Express, NestJs, Fastify 및 모든 Node.js HTTP 프레임워크와 함
 
 32자 랜덤 비밀번호 Length 32로 설정 후 복사해서 사용
 https://1password.com/password-generator/
+
+Heroicons
+https://heroicons.com/
