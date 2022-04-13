@@ -71,13 +71,15 @@ const CommunityPostDetail: NextPage = () => {
   };
   const onValid = (form: AnswerForm) => {
     if (answerLoading) return;
+    console.log("onValid", form);
     sendAnswer(form);
   };
   useEffect(() => {
     if (answerData && answerData.ok) {
       reset();
+      mutate();
     }
-  }, [answerData, reset]);
+  }, [answerData, reset, mutate]);
   return (
     <Layout canGoBack>
       <div>
@@ -166,7 +168,7 @@ const CommunityPostDetail: NextPage = () => {
             name="description"
             placeholder="Answer this question!"
             required
-            register={register("answer", { required: true, minLength: 5 })}
+            register={register("answer", { required: true })}
           />
           <button className="mt-2 w-full bg-orange-500 hover:bg-orange-600 text-white py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium focus:ring-2 focus:ring-offset-2 focus:ring-orange-500 focus:outline-none ">
             {answerLoading ? "Loading..." : "Reply"}
