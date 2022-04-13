@@ -8,6 +8,9 @@ npx prisma db push
 
 npx prisma studio
 
+db 연결
+npx pscale connect carrot-market
+
 # iron session : https://github.com/vvo/iron-session
 
 - 서명, 암호화된 쿠키를 사용하는 nodejs stateless 세션 도구
